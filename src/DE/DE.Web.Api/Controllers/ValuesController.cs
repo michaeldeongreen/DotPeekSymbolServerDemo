@@ -5,10 +5,11 @@ using System.Net;
 using System.Net.Http;
 using System.Web.Http;
 
-namespace CE.Web.Api.Controllers
+namespace DE.Web.Api.Controllers
 {
     public class ValuesController : ApiController
     {
+        // GET api/values
         public IEnumerable<string> Get()
         {
             return new string[] { "value1", "value2" };

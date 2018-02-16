@@ -5,7 +5,7 @@ using System.Linq;
 using System.Net.Http.Headers;
 using System.Web.Http;
 
-namespace CE.Web.Api
+namespace DE.Web.Api
 {
     public static class WebApiConfig
     {
