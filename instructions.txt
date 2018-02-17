@@ -20,3 +20,8 @@ https://www.jetbrains.com/decompiler/
 7) Under Symbols, add http:localhost:33417, which is the address and port of the dotPeek Symbol Server you started in the earlier step (screen-003.png)
 
 8) Install the NuGet Package, call into one of the methods and watch as you are able to debug the NuGet dll(s) (screen-004.png thru 005.png).
+
+Issues:
+1) "The breakpoint failed to bind."
+	https://stackoverflow.com/questions/31732944/breakpoint-failed-to-bind-visual-studio-2015
+	See screen-006.png
