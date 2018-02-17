@@ -1,0 +1,22 @@
+dotPeek Symbol Server Tutorial:
+https://web.archive.org/web/20160220163146/http://confluence.jetbrains.com/display/NETCOM/dotPeek+Symbol+Server+and+PDB+Generation
+
+dotPeek download location:
+https://www.jetbrains.com/decompiler/
+
+
+1) Create NuGet Package
+
+2) Install dotPeek
+
+3) Open dotPeek and add NuGet Packages you want to debug
+
+4) Run the dotPeek Symbol Server (screen-001.png)
+
+5) Open Visual Studio and go to Tools => Options => Debugging
+
+6) Under General, uncheck "Enable Just My Code" and check "Enable .NET Framework source stepping" (screen-002.png)
+
+7) Under Symbols, add http:localhost:33417, which is the address and port of the dotPeek Symbol Server you started in the earlier step (screen-003.png)
+
+8) Install the NuGet Package, call into one of the methods and watch as you are able to debug the NuGet dll(s) (screen-004.png thru 005.png).
