@@ -25,3 +25,12 @@ Issues:
 1) "The breakpoint failed to bind."
 	https://stackoverflow.com/questions/31732944/breakpoint-failed-to-bind-visual-studio-2015
 	See screen-006.png
+	
+Observations:
+1) After initial start up of debugger, each subsequent debugging session start up was fast
+
+2) Even after upgrading the NuGet package, stopping dotPeek Symbol Server and adding the new NuGet Package, debugging session was faster	
+
+3) I suspect the symbol cache denoted in Tools => Options => Debugging => Symbols is blown up after maybe a PC reboot
+
+4) As noted in the dotPeek Symbol Server Tutorial towards the bottom, you will not be able to see local variables in the NuGet Package if the Package was published in Release mode.  I re-published in Debug mode to satisfy my curiousity and confirmed this.

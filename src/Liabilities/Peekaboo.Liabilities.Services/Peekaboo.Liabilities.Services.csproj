@@ -40,8 +40,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Interfaces\ILiabilityAdjustmentService.cs" />
     <Compile Include="Interfaces\ILiabilityMatchService.cs" />
     <Compile Include="Liability.cs" />
+    <Compile Include="LiabilityAdjustment.cs" />
+    <Compile Include="LiabilityAdjustmentService.cs" />
     <Compile Include="LiabilityMatchService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

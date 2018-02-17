@@ -9,7 +9,7 @@ using Peekaboo.Liabilities.Services.Interfaces;
 
 namespace CE.Web.Api.Controllers
 {
-    public class ValuesController : ApiController
+    public class MatchController : ApiController
     {
         public IEnumerable<Liability> Get()
         {

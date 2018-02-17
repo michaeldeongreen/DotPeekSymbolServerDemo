@@ -6,10 +6,10 @@ using System.Threading.Tasks;
 
 namespace Peekaboo.Liabilities.Services
 {
-    public class Liability
+    public class LiabilityAdjustment
     {
         public int Id { get; set; }
         public string AccountNumber { get; set; }
-        public decimal? Payment { get; set; }
+        public decimal?  PaymentAdjustment { get; set; }
     }
 }
