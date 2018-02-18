@@ -11,6 +11,11 @@ namespace CE.Web.Api.Controllers
 {
     public class AdjustmentController : ApiController
     {
+        private readonly ILiabilityAdjustmentService _liabilityAdjustmentService;
+        public AdjustmentController(ILiabilityAdjustmentService liabilityAdjustmentService)
+        {
+            _liabilityAdjustmentService = liabilityAdjustmentService;
+        }
         public IEnumerable<Liability> Get()
         {
             return ApplyAdjustments();
@@ -18,12 +23,11 @@ namespace CE.Web.Api.Controllers
 
         private IEnumerable<Liability> ApplyAdjustments()
         {
-            ILiabilityAdjustmentService service = new LiabilityAdjustmentService();
-
             List<LiabilityAdjustment> adjustments = new List<LiabilityAdjustment>() { new LiabilityAdjustment() { Id = 1, AccountNumber = "101",  PaymentAdjustment = 120.00m } };
             List<Liability> existingLiabilities = new List<Liability>() { new Liability() { AccountNumber = "500", Id = 1 }, new Liability() { Id = 2, AccountNumber = "101" } };
+            _liabilityAdjustmentService.ApplyAdjustments(adjustments, existingLiabilities);
 
-            return null;
+            return existingLiabilities;
         }
     }
 }

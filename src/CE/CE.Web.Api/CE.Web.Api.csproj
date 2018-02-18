@@ -223,6 +223,7 @@
     <Compile Include="DependencyResolution\ControllerConvention.cs" />
     <Compile Include="DependencyResolution\DefaultRegistry.cs" />
     <Compile Include="DependencyResolution\IoC.cs" />
+    <Compile Include="DependencyResolution\NuGetRegistry.cs" />
     <Compile Include="DependencyResolution\StructureMapDependencyScope.cs" />
     <Compile Include="DependencyResolution\StructureMapScopeModule.cs" />
     <Compile Include="DependencyResolution\StructureMapWebApiDependencyResolver.cs" />

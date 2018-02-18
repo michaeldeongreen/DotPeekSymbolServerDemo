@@ -11,6 +11,11 @@ namespace CE.Web.Api.Controllers
 {
     public class MatchController : ApiController
     {
+        private readonly ILiabilityMatchService _liabilityMatchService;
+        public MatchController(ILiabilityMatchService liabilityMatchService)
+        {
+            _liabilityMatchService = liabilityMatchService;
+        }
         public IEnumerable<Liability> Get()
         {
             return FindMatches();
@@ -20,8 +25,7 @@ namespace CE.Web.Api.Controllers
         {
             List<Liability> creditLiabilities = new List<Liability>() { new Liability() { AccountNumber = "101", Id = 1 }, new Liability() { Id = 2, AccountNumber = "102" } };
             List<Liability> existingLiabilities = new List<Liability>() { new Liability() { AccountNumber = "500", Id = 1 }, new Liability() { Id = 2, AccountNumber = "101" } };
-            ILiabilityMatchService service = new LiabilityMatchService();
-            var matches = service.FindMatch(creditLiabilities, existingLiabilities);
+            var matches = _liabilityMatchService.FindMatch(creditLiabilities, existingLiabilities);
             return matches;
         }
     }
