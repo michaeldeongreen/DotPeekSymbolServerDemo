@@ -46,6 +46,15 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Config.Provider.Helper, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Config.Provider.Helper.3.0.0\lib\net461\Config.Provider.Helper.dll</HintPath>
+    </Reference>
+    <Reference Include="CUDC.Lending.Security, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\CUDC.Lending.Service.Core.1.0.0\lib\net461\CUDC.Lending.Security.dll</HintPath>
+    </Reference>
+    <Reference Include="CUDC.Lending.Service.Core, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\CUDC.Lending.Service.Core.1.0.0\lib\net461\CUDC.Lending.Service.Core.dll</HintPath>
+    </Reference>
     <Reference Include="GreenOne.NuGet.Server.Library, Version=4.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\GreenOne.5.0.0\lib\GreenOne.NuGet.Server.Library.dll</HintPath>
     </Reference>
@@ -294,6 +303,12 @@
   <ItemGroup>
     <None Include="packages.config" />
     <Content Include="Scripts\jquery-2.1.1.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DE.Web.Services\DE.Web.Services.csproj">
+      <Project>{280D1D88-1334-4403-95B4-7E501AF08884}</Project>
+      <Name>DE.Web.Services</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
